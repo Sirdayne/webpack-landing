@@ -1,3 +1,7 @@
+$PRIMARY_COLOR = #22252b
+$SECONDARY_COLOR = #323232
+$TEMPLATE_COLOR = #f2f2f2
+
 body
   font-family 'Muli', Tahoma, sans-serif
 
@@ -5,32 +9,43 @@ body
   float left
   width 100%
   display grid
-  grid-template-rows 50px calc(100vh - 100px) 50px
+  grid-template-rows 80px calc(100vh - 160px) 80px
 
 #header, #footer
   display flex
   align-items center
   box-sizing border-box
-  padding 0 20px
-  background #22252b
-  color #fff
+  padding 0 40px
+  background #fff
+  color $SECONDARY_COLOR
 
 #header
-  justify-content space-between
+  border-bottom 1px solid #e5e3e3
+  .wrapper
+    justify-content space-between
+    align-items center
 
 #footer
   justify-content space-around
+  border-top 1px solid #e5e3e3
 
 #header a
-  color #fff
+  color #323232
   height 14px
-  font-size 14px
+  font-size 18px
 
 #header p, #footer p
-  color #fff
-  height 14px
-  font-size 14px
+  height 16px
+  font-size 18px
 
-#container
+.container
+  width 100%
   box-sizing border-box
   padding 20px
+  background $TEMPLATE_COLOR
+
+.wrapper
+  display flex
+  margin 0 auto
+  width calc(100% - 100px)
+  max-width 1200px
